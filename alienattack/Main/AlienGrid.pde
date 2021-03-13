@@ -18,7 +18,7 @@ class alienGrid {
 
   alienGrid(int deltaX, int deltaY) {
     //constructor
-
+    
     this.deltaX = deltaX;
     this.deltaY = deltaY;
     this.sX = tempSx1;
@@ -28,6 +28,7 @@ class alienGrid {
     aBullets = new ArrayList();
 
     // make mothership
+    
     mShipOne = new mShip(250, 40);
     msBullets = new ArrayList();
 
@@ -44,6 +45,7 @@ class alienGrid {
   }
 
   // render the mother ship and the invaders
+  
   void render() {
     mShipOne.update();
     for (int i=0; i<cols; i++) {
@@ -55,6 +57,7 @@ class alienGrid {
   }       
 
   // move the aliens and keep the grid shape
+  
   void moveGrid() {
 
     for (int i=0; i<cols; i++) {
@@ -86,6 +89,7 @@ class alienGrid {
 
   // Invaders drop yellow bullets
   // Each bullet hitting the defender makes it loss score
+  
   void DropBullet() {
     if (millis() - initialTimeAdd > intervalAdd) {
       initialTimeAdd = millis();
@@ -105,6 +109,7 @@ class alienGrid {
 
   // Explode the Remove bullets and Aliens if Hit is detected 
   // 2 for loops to check the dist between bullet and an alien
+  
   void invHit() {
     for (int i = bullets.size()-1; i >= 0; i--) {
       for (int w = rows-1; w >= 0; w--) {
@@ -136,6 +141,7 @@ class alienGrid {
     }
 
     // Game End if the invaders reach defenders locY
+    
     for (int w = rows-1; w >= 0; w--) {
       for (int v = cols-1; v >= 0; v--) {
         if (invGrid[w][v] != null) {
