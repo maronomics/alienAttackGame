@@ -2,8 +2,7 @@
  ALIEN ATTACK
  PROGRAMMING FINAL ASSIGNMENT
  MARIA REHMAN 
- 14051834
- 
+
  see Game_Description
  
  Keys:
